@@ -2,14 +2,10 @@ import tkinter as tk
 import time
 import psutil 
 
-
-
 cadena = str("")
 lista = []
 lista2 = []
 detener=False
-
-
 
 def convertir():
     global lista
@@ -40,8 +36,6 @@ def detener_proceso():
     global detener
     detener = True
     
-     
-
 def activador():
     convertir()
     seleccionador()
@@ -57,9 +51,6 @@ def mostrar_contenido_ram():
     ram = psutil.virtual_memory()
     contenido_ram = f"Memoria Total: {ram.total}\nMemoria Disponible: {ram.available}\nPorcentaje de Uso: {ram.percent}%"
     texto2.insert(tk.END, contenido_ram)
-
-
-
 
 #---------------------------------------Interfaz grafica---------------------------------
 
